@@ -1,9 +1,8 @@
 const cards = document.querySelectorAll(".card");
 
 cards.forEach((card) => {
-  console.log(card.childNodes);
-  const imgDiv = card.querySelector(".img"); // Selects the .img div within the card
-
+//   console.log(card.childNodes);//1st way to get element
+  const imgDiv = card.querySelector(".img"); //2nd way
   card.addEventListener("mousemove", (dets) => {
     imgDiv.style.opacity = "1";
     imgDiv.style.left = dets.clientX - card.offsetLeft - 60 + "px";
